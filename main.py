@@ -104,7 +104,9 @@ def recommend():
         print('Error....', e)
         return str(e), 400
 
+
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))  # Use environment variable, default to 4040 if not set
     print(f'App Started...listening on: {port}')
     app.run(host='0.0.0.0', port=port)
+
