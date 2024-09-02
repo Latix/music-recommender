@@ -83,6 +83,10 @@ app = Flask(__name__)
 # Load the model
 model = joblib.load('music-recommendations.joblib')
 
+@app.route('/')
+def home():
+    return "Welcome to recommender!"
+
 @app.route('/recommend', methods=['POST'])
 def recommend():
     try:
